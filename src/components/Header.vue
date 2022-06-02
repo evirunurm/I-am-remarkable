@@ -12,7 +12,9 @@ export default {
 </script>
 
 <style scoped>
-.main_usuario_03 {
-  margin-top: 10px;
+.header_logo {
+  margin: 100px 0 50px 0;
 }
+
+
 </style>

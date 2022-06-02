@@ -3,21 +3,8 @@
     <body>
       <div class= "container02">
             <Header />
-            <Register/>  <!-- <input class="main-input-2" type="text"  maxlength="250" size="10" placeholder="i'm remarkable because">   -->    
-        </div>
-
-
-<!-- TODO 
-
-      <div class="container02">
-        <div>
-          <img class="corner" src="../images/Vectorcorner.png">
-          <Header/>
-        </div>
-        <section class="main-2">
             <Register/>
-        </section>
-      </div>-->
+        </div>
     </body>
   </div>
 </template>
