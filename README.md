@@ -1,4 +1,15 @@
-# notable-vue
+# I am Remarkable
+
+**IamRemarkable** is a Google initiative empowering women and other underrepresented groups to celebrate their achievements in the workplace and beyond.
+
+> [I am Remarkable, with Google](https://iamremarkable.withgoogle.com/)
+
+## Technologies
+
+- VueJS
+- ThreeJS
+- TweenJS
+
 
 ## Project setup
 ```
@@ -9,21 +20,3 @@ npm install
 ```
 npm run serve
 ```
-
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Run your unit tests
-```
-npm run test:unit
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
