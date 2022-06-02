@@ -2,7 +2,7 @@
 <div>
   <h2>I'm Remarkable because</h2>
   <p>{{ Remarkable }}</p>
-  <h5>{{ Name }}</h5>
+  <p class="name">{{ Name }}</p>
 </div>
 </template>
 
@@ -20,16 +20,6 @@ export default {
     };
   },
   mounted() {
-    /*axios.get("http://localhost:8080/")
-      .then(response => (
-        response.remarkable = localStorage.getItem("remarkable"),
-        this.Remarkable = response.remarkable,
-        response.country = localStorage.getItem("country"),
-        this.Country = response.country,
-        response.name = localStorage.getItem("name"),
-        this.Name = response.name
-      )
-    );*/
     this.Remarkable = localStorage.getItem("remarkable"),
       this.Country = localStorage.getItem("country"),
       this.Name = localStorage.getItem("name")
@@ -39,10 +29,22 @@ export default {
 
 <style scoped>
 p {
-  max-width: 100%;
+	font-family: 'Roboto Slab';
+	font-size: 1rem;
+	text-align: left;
+	font-weight: bold;
+	margin: 10px 0;
+}
+h2 {
+	margin: 10px 0;
 }
 
-h2 {
-  margin: 5px 0px 5px 0px;
+
+.name {
+	font-weight: normal;
+	font-family: 'Sacramento', cursive;
+  color: #9C895D;
+  font-size: 1.3em;
+  top: 10px;
 }
 </style>

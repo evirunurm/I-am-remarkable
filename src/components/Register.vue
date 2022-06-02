@@ -4,18 +4,18 @@
 	<div class="main-principal-02">
 		<img class="flecha02" src="../images/2flechita.png">
 		<img class="estrellitas02" src="../images/estrellas3.png">
-		<input  class="main-alias-2" type="text" maxlength="10" placeholder="Name / Alias" size="10">
+		<input v-model="name" @input="dataLocal($event)"  class="main-alias-2" type="text" maxlength="10" placeholder="Name / Alias" size="10">
 	</div>
 	<SelectCountries/>
 	<div class="main-why-2">
-		<textarea class="main-input-2" name="textarea" rows="4" minlength="10" size="4" maxlength="200" placeholder="I am remarkable because..."></textarea>
+		<textarea  v-model="remarkable" @input="dataLocal($event)"  class="main-input-2" name="textarea" rows="4" minlength="10" size="4" maxlength="200" placeholder="I am remarkable because..."></textarea>
 		<p>Max 200 caracters</p>
 	</div>
 </div>
 	<div class="final02">
 		<img class="estrellas1" src="../images/2conjuntoestrellas.png">
 		<img class="corona2" src="../images/2corona.png">
-		<router-link @click="dataLocal" class="button-send-2" to="/Usuario">    Share    </router-link>
+		<router-link class="button-send-2" to="/Usuario">    Share    </router-link>
 	</div>
 
   </section>
@@ -25,7 +25,7 @@
     
     export default {
         name: 'Register',
-        components:{
+        components: {
             SelectCountries,
         },
         data() {
@@ -34,16 +34,17 @@
                 remarkable: ""
             }
         },
-        mounted() {
-            this.name = localStorage.name;
-            this.remarkable = localStorage.remarkable;
-        },
-        methods:{
+		 mounted() {
+			  this.name = localStorage.getItem("name");
+			  this.remarkable = localStorage.getItem("remarkable");
+		 },
+		 methods: {
             dataLocal() {
-                localStorage.name = this.name;
-                localStorage.remarkable = this.remarkable;
-                console.log(localStorage);
-                           }
+						console.log(this.name)
+						console.log(this.remarkable)
+                	localStorage.setItem("name", this.name);
+                	localStorage.setItem("remarkable", this.remarkable);
+				}
         }
     }
 </script>

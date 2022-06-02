@@ -15,7 +15,8 @@ export default {
   name: 'Card',
   data: function() {
     return {
-      people: [{
+      people: [
+			{
         "name": "Mei",
         "description": "I 'm remarkable because I decided to follow my dreams and becore and artist.",
         "country": "China"
@@ -86,8 +87,9 @@ p {
 }
 
 .card {
-  width: 100vw;
-  padding: 120px 20vw 0 20vw;
+  	width: 100vw;
+  	padding: 120px 20vw 0 20vw;
+	background: rgba(255, 255, 255, 0.5);
 }
 
 h5 {
